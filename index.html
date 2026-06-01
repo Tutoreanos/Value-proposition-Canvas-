@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Canvas da Proposta de Valor preenchível da Tutoreanos para workshops, consultoria e desenvolvimento de negócios."
+    />
+    <title>Tutoreanos | Canvas da Proposta de Valor</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar" aria-label="Ferramentas do canvas">
+      <div class="topbar__brand">
+        <img src="assets/tutoreanos-logo-horizontal.png" alt="Tutoreanos" />
+        <span>Canvas da Proposta de Valor</span>
+      </div>
+      <nav class="actions" aria-label="Ações">
+        <button class="action-button" type="button" data-action="save">Salvar</button>
+        <button class="action-button" type="button" data-action="export">Exportar</button>
+        <button class="action-button" type="button" data-action="import">Importar</button>
+        <button class="action-button" type="button" data-action="present">Apresentar</button>
+        <button class="action-button" type="button" data-action="print">Imprimir / PDF</button>
+        <button class="action-button action-button--quiet" type="button" data-action="clear">Limpar</button>
+        <input type="file" accept="application/json,.json" hidden data-role="import-input" />
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="vpd-sheet" aria-label="Canvas da Proposta de Valor Tutoreanos">
+        <header class="sheet-header">
+          <div>
+            <p class="kicker">DESIGN DA PROPOSTA DE VALOR</p>
+            <h1>Canvas da Proposta de Valor</h1>
+          </div>
+          <img class="sheet-logo" src="assets/tutoreanos-logo-horizontal.png" alt="Tutoreanos" />
+        </header>
+
+        <section class="client-fields" aria-label="Identificação da sessão">
+          <label class="meta-field meta-field--inline">
+            <span>Cliente:</span>
+            <input type="text" data-field="cliente" aria-label="Cliente" placeholder="Nome do cliente ou empresa" />
+          </label>
+          <label class="meta-field meta-field--inline">
+            <span>Data:</span>
+            <input type="date" data-field="data" aria-label="Data" />
+          </label>
+        </section>
+
+        <section class="summary-fields" aria-label="Campos principais">
+          <label class="meta-field">
+            <span>Proposta de Valor:</span>
+            <textarea data-field="value-proposition" rows="1" aria-label="Proposta de Valor"></textarea>
+          </label>
+          <label class="meta-field">
+            <span>Segmento de Cliente:</span>
+            <textarea data-field="customer-segment" rows="1" aria-label="Segmento de Cliente"></textarea>
+          </label>
+        </section>
+
+        <div class="canvas-scroll">
+          <section class="vpd-canvas" aria-label="Canvas preenchível">
+            <div class="fit-line" aria-hidden="true">
+              <span></span>
+            </div>
+
+            <article class="value-map" aria-label="Mapa de Valor">
+              <svg class="shape-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                <line x1="0" y1="0" x2="50" y2="50" />
+                <line x1="0" y1="100" x2="50" y2="50" />
+                <line x1="50" y1="50" x2="100" y2="50" />
+              </svg>
+
+              <section class="canvas-area products-area" aria-labelledby="products-title">
+                <div class="area-label area-label--side">
+                  <span class="mini-icon" aria-hidden="true">
+                    <svg viewBox="0 0 48 48">
+                      <path d="M11 31h7l7 4h9c3 0 5-2 5-5h-9l-5-5H11v6Z" />
+                      <path d="M21 10h16v19l-8-4-8 4V10Z" />
+                    </svg>
+                  </span>
+                  <h2 id="products-title">Produtos<br />e Serviços</h2>
+                </div>
+                <div class="writing-lines" data-list="products"></div>
+              </section>
+
+              <section class="canvas-area creators-area" aria-labelledby="creators-title">
+                <div class="area-label">
+                  <h2 id="creators-title">Criadores de Ganho</h2>
+                  <span class="mini-icon" aria-hidden="true">
+                    <svg viewBox="0 0 48 48">
+                      <path d="M10 36h28" />
+                      <path d="M14 36V28h5v8" />
+                      <path d="M23 36V22h5v14" />
+                      <path d="M32 36V14h5v22" />
+                      <path d="M14 17l10-5 6 3 9-9" />
+                      <path d="M34 6h5v5" />
+                    </svg>
+                  </span>
+                </div>
+                <div class="writing-lines" data-list="gain-creators"></div>
+              </section>
+
+              <section class="canvas-area relievers-area" aria-labelledby="relievers-title">
+                <div class="area-label">
+                  <span class="mini-icon" aria-hidden="true">
+                    <svg viewBox="0 0 48 48">
+                      <path d="M16 30 30 16a9 9 0 0 1 13 13L29 43a9 9 0 0 1-13-13Z" />
+                      <path d="M23 23 36 36" />
+                    </svg>
+                  </span>
+                  <h2 id="relievers-title">Aliviadores de Dores</h2>
+                </div>
+                <div class="writing-lines" data-list="pain-relievers"></div>
+              </section>
+
+              <div class="gift-mark" aria-hidden="true">
+                <svg viewBox="0 0 96 96">
+                  <path d="M17 42h62v39H17V42Z" />
+                  <path d="M13 31h70v15H13V31Z" />
+                  <path d="M48 31v50" />
+                  <path d="M32 31c-17-18 5-31 16 0" />
+                  <path d="M64 31c17-18-5-31-16 0" />
+                </svg>
+              </div>
+            </article>
+
+            <article class="customer-profile" aria-label="Perfil do Cliente">
+              <svg class="shape-lines circle-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                <line x1="50" y1="50" x2="87" y2="15" />
+                <line x1="50" y1="50" x2="87" y2="85" />
+                <line x1="0" y1="50" x2="100" y2="50" />
+              </svg>
+
+              <section class="canvas-area gains-area" aria-labelledby="gains-title">
+                <div class="area-label">
+                  <h2 id="gains-title">Ganhos</h2>
+                  <span class="mini-icon" aria-hidden="true">
+                    <svg viewBox="0 0 48 48">
+                      <circle cx="24" cy="24" r="17" />
+                      <path d="M16 21c2-3 5-3 7 0" />
+                      <path d="M25 21c2-3 5-3 7 0" />
+                      <path d="M15 29c5 8 13 8 18 0" />
+                    </svg>
+                  </span>
+                </div>
+                <div class="writing-lines" data-list="gains"></div>
+              </section>
+
+              <section class="canvas-area jobs-area" aria-labelledby="jobs-title">
+                <div class="area-label area-label--side">
+                  <h2 id="jobs-title">Tarefas<br />do Cliente</h2>
+                  <span class="mini-icon" aria-hidden="true">
+                    <svg viewBox="0 0 48 48">
+                      <circle cx="13" cy="14" r="3" />
+                      <path d="M22 14h17" />
+                      <circle cx="13" cy="24" r="3" />
+                      <path d="M22 24h17" />
+                      <circle cx="13" cy="34" r="3" />
+                      <path d="M22 34h17" />
+                    </svg>
+                  </span>
+                </div>
+                <div class="job-lines">
+                  <div>
+                    <h3>Tarefas Funcionais</h3>
+                    <div class="writing-lines writing-lines--jobs" data-list="jobs-functional"></div>
+                  </div>
+                  <div>
+                    <h3>Tarefas Sociais</h3>
+                    <div class="writing-lines writing-lines--jobs" data-list="jobs-social"></div>
+                  </div>
+                  <div>
+                    <h3>Tarefas Emocionais</h3>
+                    <div class="writing-lines writing-lines--jobs" data-list="jobs-emotional"></div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="canvas-area pains-area" aria-labelledby="pains-title">
+                <div class="area-label">
+                  <span class="mini-icon" aria-hidden="true">
+                    <svg viewBox="0 0 48 48">
+                      <circle cx="24" cy="24" r="17" />
+                      <path d="M16 19c2 3 5 3 7 0" />
+                      <path d="M25 19c2 3 5 3 7 0" />
+                      <path d="M15 34c2-6 5-6 7 0 2-6 5-6 7 0 2-6 5-6 7 0" />
+                    </svg>
+                  </span>
+                  <h2 id="pains-title">Dores</h2>
+                </div>
+                <div class="writing-lines" data-list="pains"></div>
+              </section>
+
+              <div class="customer-mark" aria-hidden="true">
+                <svg viewBox="0 0 120 120">
+                  <path d="M62 21c-27 0-45 21-45 45h-11c0 10 8 18 18 18h15L23 101c11 10 27 15 42 11 23-5 40-26 40-49 0-23-20-42-43-42Z" />
+                  <circle cx="45" cy="57" r="5" />
+                </svg>
+              </div>
+            </article>
+          </section>
+        </div>
+
+        <footer class="canvas-footer">
+          <img src="assets/tutoreanos-logo-horizontal.png" alt="Tutoreanos" />
+          <p>Canvas da Proposta de Valor | Metodologia Tutoreanos</p>
+          <strong>tutoreanos.com.br</strong>
+        </footer>
+      </section>
+    </main>
+
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
